@@ -1,0 +1,91 @@
+[
+    {
+        "question": "Are you an organization?",
+        "yes": {
+            "question": "Do you train large language models (LLMs) with >= 13 billion parameters?",
+            "yes": {
+                "question": "Are you rich?",
+                "yes": "Your best choice is Azure A100 or H100.",
+                "no": {
+                    "question": "Are you not rich but also not poor?",
+                    "yes": "Your best choice is AWS A100 or H100.",
+                    "no": "Sorry, do something else."
+                }
+            },
+            "no": {
+                "question": "Are you rich?",
+                "yes": "Your best choice is H100 SMX.",
+                "no": "Your best choice is 80% A6000 Ada / L40, 20% H100 SMX / PCIe."
+            }
+        },
+        "no": {
+            "question": "Do you plan to train models?",
+            "yes": {
+                "question": "Do you plan to train transformer models?",
+                "yes": {
+                    "question": "Your best choice is RTX 4090. Is it within your budget?",
+                    "yes": "Your best choice is RTX 4090.",
+                    "no": {
+                        "question": "Your next best choice is used RTX 3090 or used RTX 3090 Ti. Are they within your budget?",
+                        "yes": "Your best choice is used RTX 3090 or used RTX 3090 Ti.",
+                        "no": "Sorry, do something else."
+                    }
+                },
+                "no": {
+                    "question": "Your best choice is RTX 4080. Is it within your budget?",
+                    "yes": "Your best choice is RTX 4080.",
+                    "no": {
+                        "question": "Your next best choice is RTX 4070 Ti. Is it within your budget?",
+                        "yes": "Your best choice is RTX 4070 Ti.",
+                        "no": {
+                            "question": "Your next best choice is used RTX 2080 Ti. Is it within your budget?",
+                            "yes": "Your best choice is used RTX 2080 Ti.",
+                            "no": {
+                                "question": "Your next best choice is used RTX 3060. Is it within your budget?",
+                                "yes": "Your best choice is used RTX 3060.",
+                                "no": {
+                                    "question": "Do you only work on small or streaming datasets?",
+                                    "yes": "Your best choice is vast.ai or Lambda Cloud.",
+                                    "no": "Complicated. Please read entire blog post and decide based on that information."
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "no": {
+                "question": "Do you use large language models (LLMs)?",
+                "yes": {
+                    "question": "Your best choice is RTX 4090. Is it within your budget?",
+                    "yes": "Your best choice is RTX 4090.",
+                    "no": {
+                        "question": "Your next best choice is used RTX 3090 or used RTX 3090 Ti. Are they within your budget?",
+                        "yes": "Your best choice is used RTX 3090 or used RTX 3090 Ti.",
+                        "no": {
+                            "question": "Do you only work on small or streaming datasets?",
+                            "yes": "Your best choice is vast.ai or Lambda Cloud.",
+                            "no": "Complicated. Please read entire blog post and decide based on that information."
+                        }
+                    }
+                },
+                "no": {
+                    "question": "Your best choice is RTX 4070 Ti or RTX 4080. Are they within your budget?",
+                    "yes": "Your best choice is RTX 4070 Ti or RTX 4080.",
+                    "no": {
+                        "question": "Your next best choice is used RTX 2080 Ti. Is it within your budget?",
+                        "yes": "Your best choice is used RTX 2080 Ti.",
+                        "no": {
+                            "question": "Your next best choice is used RTX 3060. Is it within your budget?",
+                            "yes": "Your best choice is used RTX 3060.",
+                            "no": {
+                                "question": "Do you only work on small or streaming datasets?",
+                                "yes": "Your best choice is vast.ai or Lambda Cloud.",
+                                "no": "Complicated. Please read entire blog post and decide based on that information."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

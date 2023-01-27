@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deep Learning GPU Selector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+        integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .btn {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="px-4 py-5 my-5 text-center">
+
+            <img class="d-block mx-auto mb-4" src="logo.svg" alt="" width="80px">
+            <h1 class="h3">Deep Learning GPU Selector</h1>
+
+            <div class="col-lg-6 mx-auto">
+
+                <div class="mh-100" style="min-height:4.5rem;">
+                    <div class="lead mt-4" id="question"></div>
+                    <div class="lead mt-4" id="answer"></div>
+                </div>
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button id="yes" type="button" class="btn btn-lg px-5 gap-3 btn-outline-success"
+                        onclick="nextQuestion(true)"><i class="bi-check2-circle"></i>&ensp;Yes</button>
+                    <button id="no" type="button" class="btn btn-lg px-5 gap-3 btn-outline-danger"
+                        onclick="nextQuestion(false)"><i class="bi-dash-circle"></i>&ensp;No</button>
+                    <button class="btn btn-lg px-4 btn-outline-secondary" onclick="init()"><i
+                            class="bi-eraser"></i>&ensp;Restart</button>
+                </div>
+
+                <div class="mt-5">
+                    <p class="text-muted">Based on Tim Dettmers' <a
+                            href="https://timdettmers.com/2023/01/16/which-gpu-for-deep-learning/" target="_blank">blog
+                            post</a> (2023-01-16).
+                    </p>
+                    <p class="text-muted">Built by <a href="https://nanx.me/">Nan Xiao</a>.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="qa.js"></script>
+</body>
+
+</html>
