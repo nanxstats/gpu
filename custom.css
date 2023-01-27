@@ -1,0 +1,24 @@
+.btn {
+    border-radius: 4px;
+}
+
+a {
+    color: #212529;
+    text-decoration: underline;
+    text-decoration-color: #adb5bd;
+    text-underline-offset: 0.25rem;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+a:hover,
+a:focus {
+    color: #212529;
+    text-decoration: underline;
+    text-decoration-color: #6c757d;
+}
