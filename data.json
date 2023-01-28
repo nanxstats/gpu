@@ -46,7 +46,7 @@
                                 "no": {
                                     "question": "Do you only work on small or streaming datasets?",
                                     "yes": "Your best choice is vast.ai or Lambda Cloud.",
-                                    "no": "Complicated. Please read entire blog post and decide based on that information."
+                                    "no": "Complicated. Please read the entire <a href='https://timdettmers.com/2023/01/16/which-gpu-for-deep-learning/' target='_blank'>blog post</a> and decide based on that information."
                                 }
                             }
                         }
@@ -64,7 +64,7 @@
                         "no": {
                             "question": "Do you only work on small or streaming datasets?",
                             "yes": "Your best choice is vast.ai or Lambda Cloud.",
-                            "no": "Complicated. Please read entire blog post and decide based on that information."
+                            "no": "Complicated. Please read the entire <a href='https://timdettmers.com/2023/01/16/which-gpu-for-deep-learning/' target='_blank'>blog post</a> and decide based on that information."
                         }
                     }
                 },
@@ -80,7 +80,7 @@
                             "no": {
                                 "question": "Do you only work on small or streaming datasets?",
                                 "yes": "Your best choice is vast.ai or Lambda Cloud.",
-                                "no": "Complicated. Please read entire blog post and decide based on that information."
+                                "no": "Complicated. Please read the entire <a href='https://timdettmers.com/2023/01/16/which-gpu-for-deep-learning/' target='_blank'>blog post</a> and decide based on that information."
                             }
                         }
                     }
