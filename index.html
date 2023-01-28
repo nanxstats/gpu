@@ -26,8 +26,8 @@
     <meta name="twitter:description"
         content="Choose the best GPU for your deep learning workflow with this interactive selector." />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/litera/bootstrap.min.css"
+        integrity="sha512-bKFHl04NnBGpTyxFreApJzGG6ikCFJUZU0nBpEwPS9fbe0g+OTL2lJVc3fRNh5Q7bQtP8tYjefsJTwywPtgpyg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
@@ -53,20 +53,22 @@
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <button id="yes" type="button" class="btn btn-lg px-5 gap-3 btn-outline-success"
-                        onclick="nextQuestion(true)"><i class="bi-check2-circle"></i>&ensp;Yes</button>
+                        onclick="nextQuestion(true)"><i class="bi-check2-circle"></i> Yes</button>
                     <button id="no" type="button" class="btn btn-lg px-5 gap-3 btn-outline-danger"
-                        onclick="nextQuestion(false)"><i class="bi-dash-circle"></i>&ensp;No</button>
-                    <button class="btn btn-lg px-4 btn-outline-secondary" onclick="init()"><i
-                            class="bi-eraser"></i>&ensp;Restart</button>
+                        onclick="nextQuestion(false)"><i class="bi-dash-circle"></i> No</button>
+                    <button class="btn btn-lg px-4 btn-outline-secondary" onclick="init()"><i class="bi-eraser"></i>
+                        Restart</button>
                 </div>
 
                 <div class="mt-5">
-                    <p class="text-muted">Based on Tim Dettmers' <a
+                    <p class="footer text-muted">Based on Tim Dettmers' <a
                             href="https://timdettmers.com/2023/01/16/which-gpu-for-deep-learning/" target="_blank">blog
                             post</a> (2023-01-16).
                     </p>
-                    <p class="text-muted">Built by <a href="https://nanx.me/">Nan Xiao</a>. <a
-                            href="https://github.com/nanxstats/gpu">Source</a>.</p>
+                    <p class="footer text-muted">
+                        Built by <a href="https://nanx.me/">Nan Xiao</a>.
+                        <a href="https://github.com/nanxstats/gpu">GitHub repo</a>.
+                    </p>
                 </div>
 
             </div>
