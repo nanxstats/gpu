@@ -15,8 +15,8 @@
 }
 
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
+    font-family: "Inconsolata";
+    src: url("fonts/Inconsolata-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -44,8 +44,8 @@ body {
 }
 
 .footer {
-    font-family: "IBM Plex Mono";
-    font-size: 0.9rem;
+    font-family: "Inconsolata", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.95rem;
 }
 
 a {
