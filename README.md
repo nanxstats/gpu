@@ -1,3 +1,5 @@
 # Deep Learning GPU Selector
 
-<https://nanx.me/gpu/>
+Tool: <https://nanx.me/gpu/>
+
+Blog post: <https://nanx.me/blog/post/gpu-selector/>
