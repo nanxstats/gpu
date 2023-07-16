@@ -1,27 +1,27 @@
 @font-face {
-    font-family: "Hanken Grotesk";
-    src: url("fonts/HankenGrotesk-Regular.woff2") format("woff2");
+    font-family: "Mona Sans";
+    src: url("fonts/Mona-Sans-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Hanken Grotesk";
-    src: url("fonts/HankenGrotesk-Bold.woff2") format("woff2");
+    font-family: "Mona Sans";
+    src: url("fonts/Mona-Sans-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 
 :root {
-    --tw-prose-font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-body: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
     font-family: var(--tw-prose-font-body);
     font-variant-ligatures: contextual common-ligatures;
-    font-feature-settings: "ss01" 1;
+    font-feature-settings: "ss01";
     background-color: #fefaef;
 }
 
