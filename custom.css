@@ -1,27 +1,26 @@
 @font-face {
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-Regular.woff2") format("woff2");
+    font-family: "Figtree";
+    src: url("fonts/Figtree-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-SemiBold.woff2") format("woff2");
+    font-family: "Figtree";
+    src: url("fonts/Figtree-SemiBold.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
 }
 
 :root {
-    --tw-prose-font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
     font-family: var(--tw-prose-font-body);
     font-variant-ligatures: contextual common-ligatures;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
     background-color: #fefaef;
 }
 
@@ -38,10 +37,16 @@ body {
 
 .lead {
     color: #343a40;
+    font-weight: 400;
+}
+
+.btn {
+    font-weight: 400;
 }
 
 .footer {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    font-weight: 400;
 }
 
 a {
