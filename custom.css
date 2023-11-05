@@ -37,11 +37,19 @@ body {
 }
 
 .lead {
+    font-size: 1.5rem;
     color: #343a40;
 }
 
 .footer {
     font-size: 0.85rem;
+}
+
+.qa {
+    min-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
