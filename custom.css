@@ -1,22 +1,22 @@
 @font-face {
-    font-family: "Zilla Slab";
-    src: url("fonts/ZillaSlab-SemiBold.woff2") format("woff2");
+    font-family: "DM Sans";
+    src: url("fonts/DMSans36pt-SemiBold.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-Regular.woff2") format("woff2");
-    font-weight: 400;
+    font-family: "DM Sans";
+    src: url("fonts/DMSans24pt-Light.woff2") format("woff2");
+    font-weight: 300;
     font-style: normal;
     font-stretch: normal;
 }
 
 :root {
-    --tw-prose-font-heading: "Zilla Slab", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-body: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-heading: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 .btn,
 .footer {
     font-family: var(--tw-prose-font-body);
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .lead {
