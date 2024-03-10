@@ -1,23 +1,25 @@
 @font-face {
     font-display: swap;
-    font-family: "Spline Sans Variable";
-    src: url("fonts/SplineSans-VariableFont_wght.woff2") format("woff2");
-    font-weight: 300 700;
+    font-family: "Work Sans Variable";
+    src: url("fonts/WorkSans-VF.woff2") format("woff2");
+    font-weight: 100 900;
 }
 
 :root {
-    --tw-prose-font-heading: "Spline Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-body: "Spline Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-heading: "Work Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-body: "Work Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
     font-family: var(--tw-prose-font-body);
     background-color: #fefaef;
+    letter-spacing: -0.03em;
 }
 
 .h3 {
     font-family: var(--tw-prose-font-heading);
     font-weight: 600;
+    letter-spacing: -0.03em;
 }
 
 .lead,
@@ -25,6 +27,7 @@ body {
 .footer {
     font-family: var(--tw-prose-font-body);
     font-weight: 400;
+    letter-spacing: -0.03em;
 }
 
 .lead {
