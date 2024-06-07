@@ -1,20 +1,13 @@
 @font-face {
     font-display: swap;
-    font-family: "Lato";
-    src: url("fonts/Lato-Regular.woff2") format("woff2");
-    font-weight: 400;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Lato";
-    src: url("fonts/Lato-Bold.woff2") format("woff2");
-    font-weight: 700;
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-VF.woff2") format("woff2");
+    font-weight: 100 900;
 }
 
 :root {
-    --tw-prose-font-heading: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-body: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-heading: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-body: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
