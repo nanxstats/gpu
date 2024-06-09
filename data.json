@@ -15,7 +15,7 @@
             "no": {
                 "question": "Are you rich?",
                 "yes": "Your best choice is H100 SXM.",
-                "no": "Your best choice is 80% A6000 Ada / L40, 20% H100 SXM / PCIe."
+                "no": "Your best choice is 80% RTX 6000 Ada / L40, 20% H100 SXM / PCIe."
             }
         },
         "no": {
