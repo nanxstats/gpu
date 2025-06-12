@@ -1,78 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Deep Learning GPU Selector</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Deep Learning GPU Selector</title>
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="referrer" content="no-referrer">
-    <meta name="description"
-        content="Choose the best GPU for your deep learning workflow with this interactive selector." />
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description"
+    content="Choose the best GPU for your deep learning workflow with this interactive selector." />
 
-    <meta property="og:url" content="https://nanx.me/gpu/" />
-    <meta property="og:title" content="Deep Learning GPU Selector">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://nanx.me/gpu/preview.png">
-    <meta property="og:description"
-        content="Choose the best GPU for your deep learning workflow with this interactive selector.">
+  <meta property="og:url" content="https://nanx.me/gpu/" />
+  <meta property="og:title" content="Deep Learning GPU Selector">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://nanx.me/gpu/preview.png">
+  <meta property="og:description"
+    content="Choose the best GPU for your deep learning workflow with this interactive selector.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@nanxstats" />
-    <meta name="twitter:creator" content="@nanxstats" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@nanxstats" />
+  <meta name="twitter:creator" content="@nanxstats" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/litera/bootstrap.min.css"
-        integrity="sha512-bKFHl04NnBGpTyxFreApJzGG6ikCFJUZU0nBpEwPS9fbe0g+OTL2lJVc3fRNh5Q7bQtP8tYjefsJTwywPtgpyg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
-        integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="custom.css" />
-    <link rel="shortcut icon" href="https://nanx.me/image/favicon.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="shortcut icon" href="https://nanx.me/image/favicon.png">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['BDO Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fade-in 0.6s ease-out',
+          },
+          keyframes: {
+            'fade-in': {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @font-face {
+      font-display: swap;
+      font-family: "BDO Grotesk";
+      src: url("fonts/BDOGrotesk-VF.woff2") format("woff2");
+      font-weight: 300 900;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .question-transition {
+      transition: opacity 0.2s ease-out;
+    }
+
+    .progress-transition {
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
 </head>
 
-<body>
-    <div class="container py-5">
-        <div class="px-4 py-5 my-5 text-center">
+<body class="bg-white text-gray-900 min-h-screen">
+  <!-- Grid lines container -->
+  <div class="fixed inset-0 pointer-events-none">
+    <!-- Top horizontal line above header -->
+    <div class="absolute left-0 right-0 top-[calc(3rem-1px)] h-px bg-gray-200 md:top-[calc(3rem-1px)]"></div>
 
-            <img class="d-block mx-auto mb-4" src="logo.svg" alt="" width="80px">
-            <h1 class="h3">Deep Learning GPU Selector</h1>
+    <!-- Horizontal line below header -->
+    <div class="absolute left-0 right-0 top-[calc(16rem+88px)] h-px bg-gray-200 md:top-[calc(24rem+158px)]"></div>
 
-            <div class="col-lg-6 mx-auto">
+    <!-- Vertical lines framing the content -->
+    <div class="absolute top-0 bottom-0 left-[calc(50%-320px)] w-px bg-gray-200 hidden lg:block"></div>
+    <div class="absolute top-0 bottom-0 right-[calc(50%-320px)] w-px bg-gray-200 hidden lg:block"></div>
+  </div>
 
-                <div class="qa mt-2 mb-3">
-                    <div class="lead" id="question"></div>
-                    <div class="lead" id="answer"></div>
-                </div>
+  <div class="relative max-w-xl mx-auto px-6 py-16 md:py-24">
+    <!-- Header -->
+    <header class="mb-8 animate-fade-in">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="logo.svg" alt="GPU" class="w-8 h-8 opacity-90" />
+        <h1 class="text-2xl font-medium">GPU Selector</h1>
+      </div>
+      <p class="text-gray-600">Find the right GPU for deep learning research.</p>
+    </header>
 
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <button id="yes" type="button" class="btn btn-lg px-5 gap-3 btn-outline-success"
-                        onclick="nextQuestion(true)"><i class="bi-check2-circle"></i> Yes</button>
-                    <button id="no" type="button" class="btn btn-lg px-5 gap-3 btn-outline-danger"
-                        onclick="nextQuestion(false)"><i class="bi-dash-circle"></i> No</button>
-                    <button class="btn btn-lg px-4 btn-outline-secondary" onclick="init()"><i class="bi-eraser"></i>
-                        Restart</button>
-                </div>
-
-                <div class="mt-5">
-                    <p class="footer text-muted">Based on Tim Dettmers’ <a
-                            href="https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/" target="_blank">blog
-                            post</a>.
-                    </p>
-                    <p class="footer text-muted">
-                        Built by <a href="https://nanx.me/">Nan Xiao</a>.
-                        <a href="https://github.com/nanxstats/gpu">GitHub repo</a>.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
+    <!-- Progress -->
+    <div id="progress-container" class="mb-2 opacity-0 transition-opacity duration-500">
+      <div class="h-px bg-gray-200 overflow-hidden">
+        <div id="progress-bar" class="h-full bg-gray-900 progress-transition" style="width: 0%;"></div>
+      </div>
     </div>
-    <script src="qa.js"></script>
+
+    <!-- Main content -->
+    <main class="animate-fade-in relative" style="min-height: 280px;">
+      <div class="flex flex-col justify-between h-full" style="min-height: 280px;">
+        <!-- Question/Answer container with fixed height -->
+        <div class="flex-1 flex items-center" style="min-height: 120px;">
+          <div class="w-full">
+            <p id="question" class="question-transition text-4xl leading-relaxed text-gray-900"></p>
+            <div id="answer" class="hidden">
+              <div class="border border-gray-300 bg-gray-50 rounded-sm p-6">
+                <p class="text-2xl text-gray-900"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions - fixed at bottom -->
+        <div class="flex gap-2 flex-wrap pt-6">
+          <button id="yes" onclick="nextQuestion(true)"
+            class="px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-sm hover:bg-gray-800 transition-colors duration-150 min-w-[100px]">
+            Yes
+          </button>
+
+          <button id="no" onclick="nextQuestion(false)"
+            class="px-6 py-3 bg-white text-gray-900 text-sm font-medium rounded-sm border border-gray-300 hover:bg-gray-50 transition-colors duration-150 min-w-[100px]">
+            No
+          </button>
+
+          <button onclick="init()"
+            class="px-6 py-3 bg-white text-gray-600 text-sm font-medium rounded-sm border border-gray-300 hover:border-gray-400 hover:text-gray-900 transition-all duration-150 min-w-[100px]">
+            Restart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 pt-12">
+      <div class="text-sm text-gray-500 space-y-1">
+        <p>Based on <a href="https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/" target="_blank"
+            class="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300">Tim Dettmers'
+            guide</a>.</p>
+        <p>By <a href="https://nanx.me/"
+            class="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300">Nan Xiao</a> · <a
+            href="https://github.com/nanxstats/gpu"
+            class="text-gray-700 hover:text-gray-900 underline underline-offset-2 decoration-gray-300">Source</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="qa.js"></script>
 </body>
 
 </html>
